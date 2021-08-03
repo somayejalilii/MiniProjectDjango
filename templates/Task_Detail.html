@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load customtags %}
+{% block content %}
+    <h5>title : {{ object.title| capitalize }}</h5><br>
+    <h5>description : {{ object.description }}</h5><br>
+    <h5>priority : {{ object.priority  }}</h5><br>
+    <h5>time_reached : {{ object.time_reached  }}</h5><br>
+    <h5>category : {{ object.category  }}</h5><br>
+    <p>Remaining time until the maturity of each Tessel :{% remainedtime object.time_reached %}</p>
+{% endblock %}

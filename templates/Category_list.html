@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>task</h1>
+    {% for obj in object_list.queryset %}
+        <li> {{ obj.name}}</li>
+    {% endfor %}
+    <h1>no task</h1>
+    {% for obj in object_list.queryset1 %}
+        <li> {{ obj.name}}</li>
+        <a href={%url 'todo:task_detail' obj.pk %}>{{ obj.name}}</a>
+    {% endfor %}
+{% endblock %}
+
